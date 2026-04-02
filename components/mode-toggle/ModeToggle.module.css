@@ -1,0 +1,62 @@
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--toggle-wrapper-bg);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-card);
+}
+
+.toggleLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.15s;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.toggleLabelActive {
+  color: var(--text-primary);
+}
+
+.toggle {
+  width: 40px;
+  height: 22px;
+  background: var(--bg-toggle);
+  border-radius: var(--radius-full);
+  position: relative;
+  cursor: pointer;
+  border: none;
+  transition: none !important;
+}
+
+.toggle.hasInteracted {
+  transition: background 0.2s !important;
+}
+
+.toggleChecked {
+  background: linear-gradient(135deg, var(--purple-500), #3b82f6);
+}
+
+.toggleThumb {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  transition: none !important;
+  transform: translateX(2px);
+  position: absolute;
+  top: 2px;
+}
+
+.toggleThumb.hasInteracted {
+  transition: transform 0.2s !important;
+}
+
+.toggleThumbChecked {
+  transform: translateX(20px);
+}

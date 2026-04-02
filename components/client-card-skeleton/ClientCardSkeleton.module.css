@@ -1,0 +1,83 @@
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.header {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subtitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--skeleton-from) 25%,
+    var(--skeleton-via) 50%,
+    var(--skeleton-from) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+.skeletonTitle {
+  width: 200px;
+  height: 18px;
+}
+
+.skeletonTag {
+  width: 120px;
+  height: 22px;
+  border-radius: var(--radius-full);
+}
+
+.skeletonSubtitle {
+  width: 80px;
+  height: 14px;
+}
+
+.skeletonBadge {
+  width: 50px;
+  height: 18px;
+  border-radius: var(--radius-full);
+}
+
+.skeletonToggle {
+  width: 200px;
+  height: 34px;
+  border-radius: var(--radius-full);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

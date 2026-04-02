@@ -1,0 +1,129 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-content);
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Glitch-style 404 number */
+.glitch {
+  font-size: 140px;
+  font-weight: 800;
+  letter-spacing: -4px;
+  line-height: 1;
+  color: var(--text-primary);
+  position: relative;
+  text-shadow:
+    0 0 40px rgba(109, 92, 255, 0.3),
+    0 0 80px rgba(109, 92, 255, 0.1);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+
+.glitch::before {
+  color: var(--purple-400);
+  animation: glitch-shift 3s infinite ease-in-out;
+  clip-path: inset(0 0 60% 0);
+}
+
+.glitch::after {
+  color: var(--red-400);
+  animation: glitch-shift 3s infinite ease-in-out reverse;
+  clip-path: inset(60% 0 0 0);
+}
+
+@keyframes glitch-shift {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 1px); }
+  40% { transform: translate(2px, -1px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 2px); }
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 8px;
+}
+
+.description {
+  font-size: 15px;
+  color: var(--text-secondary);
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 12px 28px;
+  background: var(--purple-500);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.button:hover {
+  background: var(--purple-600);
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Background orbs */
+.bgOrb1,
+.bgOrb2 {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+}
+
+.bgOrb1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(109, 92, 255, 0.12);
+  top: -100px;
+  right: -150px;
+}
+
+.bgOrb2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(236, 72, 153, 0.08);
+  bottom: -80px;
+  left: -120px;
+}

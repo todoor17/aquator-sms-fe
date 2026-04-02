@@ -1,0 +1,382 @@
+.tableWrapper {
+  background: var(--bg-table);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-card);
+  overflow: hidden;
+}
+
+.tableScroll {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--bg-table);
+}
+
+.table thead tr {
+  border-bottom: 1px solid var(--border-card);
+}
+
+.table th {
+  text-align: left;
+  padding: 10px 16px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table th:last-child {
+  text-align: right;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid var(--row-border);
+  transition: background 0.15s;
+}
+
+.table tbody tr:hover {
+  background: var(--hover-row);
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table td {
+  padding: 10px 16px;
+  vertical-align: top;
+}
+
+/* Form fields */
+.inputField {
+  background: var(--bg-input);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 13px;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.dateDisplay {
+  font-size: 13px;
+  color: var(--text-primary);
+  padding: 6px 10px;
+  opacity: 0.45;
+}
+
+.inputField[type="date"]::-webkit-calendar-picker-indicator {
+  display: block;
+  filter: invert(45%) sepia(8%) saturate(500%) hue-rotate(210deg)
+    brightness(85%);
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.inputField[type="date"]:disabled::-webkit-calendar-picker-indicator {
+  display: block;
+  visibility: visible;
+  filter: invert(45%) sepia(8%) saturate(500%) hue-rotate(210deg)
+    brightness(85%);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.inputField[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.dateInputWrapper {
+  position: relative;
+  width: 130px;
+}
+
+.dateField {
+  width: 100%;
+  padding-right: 28px;
+}
+
+.fieldError {
+  display: block;
+  font-size: 11px;
+  color: var(--red-400);
+  margin-top: 3px;
+  padding-left: 2px;
+}
+
+.datePickerHidden {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  width: 28px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: transparent;
+}
+
+.datePickerHidden::-webkit-calendar-picker-indicator {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  filter: invert(45%) sepia(8%) saturate(500%) hue-rotate(210deg)
+    brightness(85%);
+  opacity: 0.8;
+}
+
+.datePickerHidden::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.inputField:focus {
+  border-color: var(--border-focus);
+}
+
+.inputField:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.inputFieldError {
+  border-color: var(--red-500);
+}
+
+.phoneField {
+  min-width: 140px;
+}
+
+.selectField {
+  background: var(--bg-input);
+  border: 1px solid var(--border-input);
+  border-radius: var(--radius-sm);
+  padding: 6px 10px;
+  font-size: 13px;
+  color: var(--text-primary);
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.selectField option {
+  background: var(--bg-card);
+}
+
+.selectField:focus {
+  border-color: var(--border-focus);
+}
+
+.selectField:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.selectFieldError {
+  border-color: var(--red-500);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.badgeSent {
+  background: var(--green-bg);
+  color: var(--green-400);
+  border: 1px solid var(--green-border);
+}
+
+.badgePending {
+  background: var(--gray-badge-bg);
+  color: var(--text-secondary);
+  border: 1px solid var(--gray-badge-border);
+}
+
+.badgePlanned {
+  background: rgba(59, 130, 246, 0.12);
+  color: var(--blue-tag);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.badgeCancelled {
+  background: var(--red-bg);
+  color: var(--red-400);
+  border: 1px solid var(--red-border);
+}
+
+.badgeError {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--error-tag);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+/* Tip SMS tags */
+.tipSmsCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tipTag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.tipTagS1 {
+  background: rgba(168, 85, 247, 0.15);
+  color: var(--purple-tag);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.tipTagS2 {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--blue-tag);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.tipTagS3 {
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--orange-tag);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.iconBtn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBtn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.iconBtn:disabled:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+.iconBtnEdit:hover {
+  background: rgba(109, 92, 255, 0.15);
+  border-color: rgba(109, 92, 255, 0.3);
+}
+
+.iconBtnDelete:hover {
+  background: var(--red-bg);
+  border-color: var(--red-border);
+}
+
+.iconBtnSave:hover {
+  background: var(--green-bg);
+  border-color: var(--green-border);
+}
+
+.iconBtnCancel:hover {
+  background: rgba(109, 92, 255, 0.15);
+  border-color: rgba(109, 92, 255, 0.3);
+}
+
+/* Add row button */
+.addBtn {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 6px;
+  padding: 10px 14px;
+  background: transparent;
+  border: 1px solid rgba(109, 92, 255, 0.35);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.addBtn:hover {
+  background: rgba(109, 92, 255, 0.1);
+  border-color: rgba(109, 92, 255, 0.5);
+}
+
+.addBtn:active:not(:disabled) {
+  transform: scale(0.98);
+  background: rgba(109, 92, 255, 0.18);
+  border-color: var(--purple-500);
+}
+
+.addBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.addBtn:disabled:hover {
+  background: transparent;
+  border-color: rgba(109, 92, 255, 0.35);
+}
+
+/* Empty state */
+.emptySms {
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px dashed var(--border-card);
+  border-radius: var(--radius-lg);
+  background: var(--empty-bg);
+}
+
+.emptyIcon {
+  font-size: 28px;
+  opacity: 0.6;
+}

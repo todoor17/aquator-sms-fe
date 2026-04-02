@@ -1,0 +1,136 @@
+.orderBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.orderBlock + .orderBlock {
+  border-top: 1px solid var(--border-card);
+  padding-top: 20px;
+}
+
+.orderTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding: 14px 18px;
+  margin: -8px -12px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(109, 92, 255, 0.35);
+  background: linear-gradient(135deg, rgba(109, 92, 255, 0.08), rgba(109, 92, 255, 0.03));
+  box-shadow: 0 0 12px rgba(109, 92, 255, 0.08);
+  transition: all 0.2s;
+}
+
+.orderTitleRow:hover {
+  background: linear-gradient(135deg, rgba(109, 92, 255, 0.15), rgba(109, 92, 255, 0.06));
+  border-color: rgba(109, 92, 255, 0.5);
+  box-shadow: 0 0 20px rgba(109, 92, 255, 0.15);
+}
+
+.orderChevron {
+  color: var(--text-primary);
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  background: rgba(109, 92, 255, 0.2);
+  border: 1px solid rgba(109, 92, 255, 0.35);
+  transition: all 0.2s;
+}
+
+.orderTitleRow:hover .orderChevron {
+  background: rgba(109, 92, 255, 0.35);
+  border-color: rgba(109, 92, 255, 0.5);
+}
+
+.orderTitleRow:hover .orderChevron {
+  background: rgba(109, 92, 255, 0.2);
+  border-color: rgba(109, 92, 255, 0.4);
+}
+
+.orderContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 20px;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tagPhone {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--green-bg);
+  color: var(--green-400);
+  border: 1px solid var(--green-border);
+}
+
+.tagDate {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--yellow-tag-bg);
+  color: var(--yellow-tag);
+  border: 1px solid var(--yellow-tag-border);
+}
+
+.tagOrder {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+  background: var(--red-bg);
+  color: var(--red-400);
+  border: 1px solid var(--red-border);
+}
+
+.smsTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 8px;
+}
+
+.productList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.productItem {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding-left: 16px;
+}
+
+.productItem::before {
+  content: "\2022  ";
+}

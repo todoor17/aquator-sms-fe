@@ -1,0 +1,22 @@
+.header {
+  padding-top: 32px;
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.subheading {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
